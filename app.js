@@ -27,6 +27,17 @@ app.get("/contact", function(req,res){
   res.render("contact", { Content: contactContent})
 })
 
+app.get("/compose", function(req,res){
+  res.render("compose")
+})
+
+app.post("/compose", function(req, res){
+  let compose = req.body.composeItem;
+
+  console.log(compose);
+  res.redirect("/compose");
+})
+
 
 
 
