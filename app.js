@@ -32,7 +32,7 @@ app.get("/compose", function(req,res){
 })
 
 app.post("/compose", function(req, res){
-  let compose = req.body.composeItem;
+  let compose = req.body.composeTitle;
 
   console.log(compose);
   res.redirect("/compose");
