@@ -17,8 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 app.get("/", function(req,res){
-  res.render("home", { Content: homeStartingContent});
-  console.log(entryArr);
+  res.render("home", { Content: homeStartingContent, entries: entryArr});
 })
 
 app.get("/about", function(req,res){
@@ -32,6 +31,7 @@ app.get("/contact", function(req,res){
 app.get("/compose", function(req,res){
   res.render("compose")
 })
+
 
 app.post("/compose", function(req, res){
   const entry = {
