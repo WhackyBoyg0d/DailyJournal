@@ -4,7 +4,9 @@
 <p><%= Content %></p>
 <% entries.forEach(function(entry) {%>
 <h1><%= entry.title %></h1>
-<p> <%= entry.post %></p>
+<p > <%= entry.post.substring(0,100) + " ..." %></p>
+<%  let message = "posts/" + entry.title %>
+<a href= "/posts/<%= entry.title %>">Read More</a>
 <% });%>
 
 

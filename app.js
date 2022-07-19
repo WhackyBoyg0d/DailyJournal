@@ -47,6 +47,9 @@ app.get('/posts/:message', (req, res) => {
 
 
 
+
+
+
 app.post("/compose", function(req, res){
   const entry = {
     title: req.body.composeTitle,
