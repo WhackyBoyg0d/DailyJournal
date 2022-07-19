@@ -32,6 +32,10 @@ app.get("/compose", function(req,res){
   res.render("compose")
 })
 
+app.get('/posts/:message', (req, res) => {
+  console.log(req.params.message);
+})
+
 
 app.post("/compose", function(req, res){
   const entry = {
